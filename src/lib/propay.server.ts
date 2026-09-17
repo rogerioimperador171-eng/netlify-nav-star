@@ -3,8 +3,9 @@
  * Este arquivo só roda no servidor — as credenciais nunca chegam ao navegador.
  */
 
-const BASE_URL = process.env["PROPAY_BASE_URL"] ?? "https://api.propixbr.com";
 const TIMEOUT_MS = 20000;
+const baseUrl = () => process.env["PROPAY_BASE_URL"] ?? "https://api.propixbr.com";
+
 
 export type CreatePixInput = {
   amount: number;
