@@ -24,17 +24,20 @@ import { CheckoutModal } from "@/components/CheckoutModal";
 import { PixCheckout } from "@/components/PixCheckout";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import demoAsset from "@/assets/miniko/demo.mp4.asset.json";
-import gifAsset from "@/assets/miniko/funbox.gif.asset.json";
-import product1 from "@/assets/miniko/product-1.png.asset.json";
-import product2 from "@/assets/miniko/product-2.png.asset.json";
-import product3 from "@/assets/miniko/product-3.png.asset.json";
-import product4 from "@/assets/miniko/product-4.png.asset.json";
-import product5 from "@/assets/miniko/product-5.png.asset.json";
-import product6 from "@/assets/miniko/product-6.png.asset.json";
-import product7 from "@/assets/miniko/product-7.png.asset.json";
-import product8 from "@/assets/miniko/product-8.png.asset.json";
-import product9 from "@/assets/miniko/product-9.png.asset.json";
+import {
+  demoAsset,
+  gifAsset,
+  product1,
+  product2,
+  product3,
+  product4,
+  product5,
+  product6,
+  product7,
+  product8,
+  product9,
+} from "@/lib/media";
+
 
 const photos = [product1, product2, product3, product4, product5, product6, product7, product8, product9].map(
   (asset, index) => ({ src: asset.url, alt: `MiniKo Squishy FunBox — foto ${index + 1} de 9` }),
