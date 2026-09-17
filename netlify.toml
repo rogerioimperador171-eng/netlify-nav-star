@@ -1,5 +1,5 @@
 [build]
-  command = "bun install --frozen-lockfile && bun run build"
+  command = "bun install && bun run build"
   publish = "dist/client"
   functions = "netlify/functions"
 

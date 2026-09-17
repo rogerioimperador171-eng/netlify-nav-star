@@ -54,7 +54,7 @@ async function callApi(path: string, body: unknown): Promise<Record<string, unkn
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
 
   try {
-    const response = await fetch(`${BASE_URL}${path}`, {
+    const response = await fetch(`${baseUrl()}${path}`, {
       method: "POST",
       headers: {
         "x-client-id": clientId,
