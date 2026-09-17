@@ -1,0 +1,30 @@
+[build]
+  command = "bun install --frozen-lockfile && bun run build"
+  publish = "dist/client"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "22"
+  BUN_VERSION = "1.3.3"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Mesmas URLs usadas pelo frontend em qualquer host
+[[redirects]]
+  from = "/api/public/pix/create"
+  to = "/.netlify/functions/pix-create"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/public/pix/check"
+  to = "/.netlify/functions/pix-check"
+  status = 200
+  force = true
+
+# SPA catch-all — precisa ser a última regra
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
