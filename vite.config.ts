@@ -11,8 +11,9 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
-    // Gera dist/client/index.html para o deploy estático da Netlify (redirect SPA /*)
-    prerender: { enabled: true, crawlLinks: false },
+    // Gera somente a página pública declarada abaixo. Desativar a descoberta
+    // automática evita que o build da Netlify tente renderizar rotas internas.
+    prerender: { enabled: true, autoStaticPathsDiscovery: false },
     pages: [{ path: "/" }],
   },
 });
