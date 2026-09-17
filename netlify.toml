@@ -1,5 +1,5 @@
 [build]
-  command = "bun install && (bun run build || echo 'prerender falhou, usando fallback') && bun scripts/ensure-index.mjs"
+  command = "bun install --frozen-lockfile && bun run build"
   publish = "dist/client"
   functions = "netlify/functions"
 
